@@ -8,8 +8,6 @@ namespace TaskHard2
 {
     public class City
     {
-
-
         public City(int id, string name, double price, double transit, double nalog)
         {
             this.id = id;
@@ -37,7 +35,5 @@ namespace TaskHard2
         public double price { get; set; }
         public double transit { get; set; }
         public double nalog { get; set; }
-
-
     }
 }
