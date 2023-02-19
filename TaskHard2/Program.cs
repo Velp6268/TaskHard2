@@ -95,7 +95,8 @@ namespace TaskHard2
                 if (temp == selectCity.Length)
                 {
                     price += CalcPrice(price, cities, selectCity[i], selectCity[i + 1]);
-                    if (selectCity[i].id == 3) price *= 1.5;
+                    
+                    if (selectCity[i].id == 6) price *= 1.5;
                 }
 
             }
@@ -114,49 +115,49 @@ namespace TaskHard2
 
             if (secondCity.id == 1)
             {
-                price += cities[1].price * cities[1].nalog - cities[1].price;
-                price += cities[1].price * 1.04 - cities[1].price;
+                price += cities[0].price * cities[0].nalog - cities[0].price;
+                price += cities[0].price * 1.04 - cities[0].price;
             }
 
             if (secondCity.id == 2)
-                price += cities[2].price * 1.04 - cities[2].price;
+                price += cities[1].price * 1.04 - cities[1].price;
 
             if (secondCity.id == 3)
-                price += cities[3].price * 1.04 - cities[3].price;
+                price += cities[2].price * 1.04 - cities[2].price;
 
             if (secondCity.id == 4)
             {
-                price += cities[8].transit;
-                if (firstCity.id == 3) price += cities[4].price * 1.09 - cities[4].price;
-                price += cities[4].price * 1.04 - cities[4].price;
-                if (firstCity.id == 7) price += cities[8].transit + cities[1].transit;
+                price += cities[7].transit;
+                if (firstCity.id == 3) price += cities[3].price * 1.09 - cities[3].price;
+                price += cities[3].price * 1.04 - cities[3].price;
+                if (firstCity.id == 7) price += cities[7].transit + cities[0].transit;
             }
 
             if (secondCity.id == 5)
-                price += cities[3].price;
+                price += cities[2].price;
 
             if (secondCity.id == 7)
             {
-                if (firstCity.id == 5) price += cities[7].price * 1.07 - cities[7].price;
-                if (firstCity.id == 9) price += cities[7].price * 1.11 - cities[7].price;
-                price += cities[7].price * 1.04 - cities[7].price;
-                if (firstCity.id == 4) price += cities[8].transit + cities[1].transit;
+                if (firstCity.id == 5) price += cities[6].price * 1.07 - cities[6].price;
+                if (firstCity.id == 9) price += cities[6].price * 1.11 - cities[6].price;
+                price += cities[6].price * 1.04 - cities[6].price;
+                if (firstCity.id == 4) price += cities[7].transit + cities[0].transit;
             }
 
             if (secondCity.id == 8)
-                price += cities[8].price * 1.04 - cities[8].price;
+                price += cities[7].price * 1.04 - cities[7].price;
 
             if (secondCity.id == 9)
-                price += cities[11].transit;
+                price += cities[10].transit;
 
             if (secondCity.id == 10)
             {
-                price += cities[3].transit;
-                price += cities[10].price * 1.04 - cities[10].price;
+                price += cities[2].transit;
+                price += cities[9].price * 1.04 - cities[9].price;
             }
 
             if (secondCity.id == 11)
-                price += cities[11].price * 1.04 - cities[11].price;
+                price += cities[10].price * 1.04 - cities[10].price;
 
             return price;
         }
